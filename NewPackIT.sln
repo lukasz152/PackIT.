@@ -7,17 +7,17 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AB42AC70-8C0
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{ED2EB4C0-5D17-4F06-B05E-FC90CC1EDFC7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared", "PackIT.Shared\PackIT.Shared.csproj", "{7C18F30B-0D3D-4F09-93B9-7F7CA131DF5E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared", "src\PackIT.Shared\PackIT.Shared.csproj", "{7C18F30B-0D3D-4F09-93B9-7F7CA131DF5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared.Abstractions", "PackIT.Shared.Abstractions\PackIT.Shared.Abstractions.csproj", "{E1DE8226-B315-4976-B01B-B08B687C1621}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Shared.Abstractions", "src\PackIT.Shared.Abstractions\PackIT.Shared.Abstractions.csproj", "{E1DE8226-B315-4976-B01B-B08B687C1621}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Api", "PackIT.Api\PackIT.Api.csproj", "{5F9AF232-10F0-4FF3-8B2C-A2FF6CE86025}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Api", "src\PackIT.Api\PackIT.Api.csproj", "{5F9AF232-10F0-4FF3-8B2C-A2FF6CE86025}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Application", "PackIT.Application\PackIT.Application.csproj", "{1233FC77-9326-4233-94F7-6D5F5A86927F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Application", "src\PackIT.Application\PackIT.Application.csproj", "{1233FC77-9326-4233-94F7-6D5F5A86927F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Domain", "PackIT.Domain\PackIT.Domain.csproj", "{8F576EEA-45C3-4967-A65D-8BF7442E3F06}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Domain", "src\PackIT.Domain\PackIT.Domain.csproj", "{8F576EEA-45C3-4967-A65D-8BF7442E3F06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Infrastructure", "PackIT.Infrastructure\PackIT.Infrastructure.csproj", "{08851441-5B1B-4959-B29F-24BF263AD57E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackIT.Infrastructure", "src\PackIT.Infrastructure\PackIT.Infrastructure.csproj", "{08851441-5B1B-4959-B29F-24BF263AD57E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
