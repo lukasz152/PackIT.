@@ -4,12 +4,13 @@ using PackIT.Domain.Consts;
 using PackIT.Domain.Policies;
 namespace PackIT.Domain.Factories
 {
-    internal class PackingListFactory : IPackingListFactory
+    public sealed class PackingListFactory : IPackingListFactory
     {
-
         private readonly IEnumerable<IPackingItemsPolicy> _policies;
+
         public PackingListFactory(IEnumerable<IPackingItemsPolicy> policies)
             => _policies = policies;
+
         public PackingList Create(PackingListId id, PackingListName name, Localization localization)
             => new(id, name, localization);
 

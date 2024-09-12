@@ -11,25 +11,26 @@
 
         protected void AddEvent(IDomainEvent @event)
         {
-            if (_events.Any() && !_versionIncremented)
+            if (!_events.Any() && !_versionIncremented)
             {
                 Version++;
                 _versionIncremented = true;
-
-                _events.Add(@event);
             }
 
+            _events.Add(@event);
         }
+
         public void ClearEvents() => _events.Clear();
+
         protected void IncrementVersion()
         {
             if (_versionIncremented)
             {
                 return;
             }
+
             Version++;
             _versionIncremented = true;
-
         }
     }
 }

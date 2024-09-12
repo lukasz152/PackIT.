@@ -6,6 +6,7 @@ namespace PackIT.Shared.Commands
     internal sealed class InMemoryCommandDispatcher : ICommandDispatcher
     {
         private readonly IServiceProvider _serviceProvider;
+
         public InMemoryCommandDispatcher(IServiceProvider serviceProvider)
             => _serviceProvider = serviceProvider;
 
@@ -15,7 +16,6 @@ namespace PackIT.Shared.Commands
             var handler = scope.ServiceProvider.GetRequiredService<ICommandHandler<TCommand>>();
 
             await handler.HandleAsync(command);
-
         }
     }
 }

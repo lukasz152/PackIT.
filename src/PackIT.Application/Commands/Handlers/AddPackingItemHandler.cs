@@ -14,17 +14,17 @@ namespace PackIT.Application.Commands.Handlers
 
         public async Task HandleAsync(AddPackingItem command)
         {
-            var packingList = await _repository.GetAsync(command.packingListId);
+            var packingList = await _repository.GetAsync(command.PackingListId);
 
             if (packingList is null)
             {
-                throw new PackingListNotFoundException(command.packingListId);
+                throw new PackingListNotFoundException(command.PackingListId);
             }
 
             var packingItem = new PackingItem(command.Name, command.Quantity);
             packingList.AddItem(packingItem);
 
-            await _repository.UpadateAsync(packingList);
+            await _repository.UpdateAsync(packingList);
         }
     }
 }

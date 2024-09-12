@@ -6,6 +6,7 @@ namespace PackIT.Application.Commands.Handlers
     internal sealed class RemovePackingItemHandler : ICommandHandler<RemovePackingItem>
     {
         private readonly IPackingListRepository _repository;
+
         public RemovePackingItemHandler(IPackingListRepository repository)
             => _repository = repository;
 
@@ -20,7 +21,7 @@ namespace PackIT.Application.Commands.Handlers
 
             packingList.RemoveItem(command.Name);
 
-            await _repository.UpadateAsync(packingList);
+            await _repository.UpdateAsync(packingList);
         }
     }
 }

@@ -10,7 +10,7 @@ namespace PackIT.Application
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
             services.AddCommands();
-            services.AddSingleton<IPackingListFactory, IPackingListFactory>();
+            services.AddSingleton<IPackingListFactory, PackingListFactory>();
 
             services.Scan(b => b.FromAssemblies(typeof(IPackingItemsPolicy).Assembly)
                 .AddClasses(c => c.AssignableTo<IPackingItemsPolicy>())

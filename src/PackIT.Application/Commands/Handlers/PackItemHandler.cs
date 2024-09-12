@@ -21,7 +21,7 @@ namespace PackIT.Application.Commands.Handlers
 
             packingList.PackItem(command.Name);
 
-            await _repository.UpadateAsync(packingList);
+            await _repository.UpdateAsync(packingList);
         }
     }
 }

@@ -11,7 +11,5 @@ namespace PackIT.Domain.Policies
     {
         bool IsApplicable(PolicyData data);
         IEnumerable<PackingItem> GenerateItems(PolicyData data);
-
-
     }
 }

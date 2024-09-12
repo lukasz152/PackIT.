@@ -22,12 +22,14 @@ namespace PackIT.Application.Commands.Handlers
             _readService = readService;
             _weatherService = weatherService;
         }
+
         public async Task HandleAsync(CreatePackingListWithItems command)
         {
             var (id, name, days, gender, localizationWriteModel) = command;
-            if (await _readService.ExistsByNameAsync(command.Name))
+
+            if (await _readService.ExistsByNameAsync(name))
             {
-                throw new PackingListAlreadyExistsException(command.Name);
+                throw new PackingListAlreadyExistsException(name);
             }
 
             var localization = new Localization(localizationWriteModel.City, localizationWriteModel.Country);
@@ -38,7 +40,8 @@ namespace PackIT.Application.Commands.Handlers
                 throw new MissingLocalizationWeatherException(localization);
             }
 
-            var packingList = _factory.CreateWithDefaultItems(id, name, days, gender, weather.Temperature, localization);
+            var packingList = _factory.CreateWithDefaultItems(id, name, days, gender, weather.Temperature,
+                localization);
 
             await _repository.AddAsync(packingList);
         }

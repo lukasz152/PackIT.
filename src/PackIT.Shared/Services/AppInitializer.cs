@@ -26,6 +26,7 @@ namespace PackIT.Shared.Services
                 {
                     continue;
                 }
+
                 await dbContext.Database.MigrateAsync(cancellationToken);
             }
         }

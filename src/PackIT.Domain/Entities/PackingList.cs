@@ -8,13 +8,20 @@ namespace PackIT.Domain.Entities
     public class PackingList : AggregateRoot<PackingListId>
     {
         public PackingListId Id { get; private set; }
+
         private PackingListName _name;
         private Localization _localization;
+
         private readonly LinkedList<PackingItem> _items = new();
+
         private PackingList(PackingListId id, PackingListName name, Localization localization, LinkedList<PackingItem> items)
             : this(id, name, localization)
         {
             _items = items;
+        }
+
+        private PackingList()
+        {
         }
 
         internal PackingList(PackingListId id, PackingListName name, Localization localization)
@@ -45,9 +52,9 @@ namespace PackIT.Domain.Entities
             }
         }
 
-        public void PackItem(string itemNamem)
+        public void PackItem(string itemName)
         {
-            var item = GetItem(itemNamem);
+            var item = GetItem(itemName);
             var packedItem = item with { IsPacked = true };
 
             _items.Find(item).Value = packedItem;
@@ -64,7 +71,8 @@ namespace PackIT.Domain.Entities
         private PackingItem GetItem(string itemName)
         {
             var item = _items.SingleOrDefault(i => i.Name == itemName);
-            if (item == null)
+
+            if (item is null)
             {
                 throw new PackingItemNotFoundException(itemName);
             }

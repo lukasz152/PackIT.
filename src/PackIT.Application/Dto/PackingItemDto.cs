@@ -10,6 +10,6 @@ namespace PackIT.Application.Dto
     {
         public string Name { get; set; }
         public uint Quantity { get; set; }
-        public string IsPacked { get; set; }
+        public bool IsPacked { get; set; }
     }
 }
