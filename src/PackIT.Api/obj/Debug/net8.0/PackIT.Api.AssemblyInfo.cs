@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PackIT.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1075ab6915625091135b5eee55d848b1b3fc5694")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+912e60cbc1dd9abe41f66888b98fa5bff68c42af")]
 [assembly: System.Reflection.AssemblyProductAttribute("PackIT.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PackIT.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

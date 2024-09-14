@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace PackIT.Api.Controllers
+namespace PackIT.Api
 {
     [ApiController]
     [Route("api/[controller]")]

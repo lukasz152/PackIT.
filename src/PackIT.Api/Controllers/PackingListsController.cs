@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using PackIT.Application.Commands;
 using PackIT.Application.Dto;
 using PackIT.Application.Queries;
